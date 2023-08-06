@@ -1,0 +1,26 @@
+@import "root";
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        & .location {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            background-color: #EAEAEA;
+        }
+
+        & button {
+                padding: 13px 18.75px;
+                border-radius: 25px;
+                border: 0px;
+                color: white;
+                background: linear-gradient($second-color, $main-color);
+        }
+    }

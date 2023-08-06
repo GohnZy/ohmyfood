@@ -1,0 +1,32 @@
+:root {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f6f6f6;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+nav .location {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #EAEAEA;
+}
+nav button {
+  padding: 13px 18.75px;
+  border-radius: 25px;
+  border: 0px;
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+}/*# sourceMappingURL=nav.css.map */

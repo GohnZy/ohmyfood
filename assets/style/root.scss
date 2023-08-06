@@ -1,0 +1,14 @@
+$main-color: #9356DC;
+$second-color: #FF79DA;
+$third-color: #99E2D0;
+$background-color: #f6f6f6;
+
+:root {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: $background-color;
+}

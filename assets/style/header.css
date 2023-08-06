@@ -1,0 +1,22 @@
+:root {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f6f6f6;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  width: 100%;
+  background-color: white;
+}
+header img {
+  width: 60%;
+  height: 60%;
+}/*# sourceMappingURL=header.css.map */
