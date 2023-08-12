@@ -14,13 +14,40 @@
             align-items: center;
             gap: 20px;
             background-color: #EAEAEA;
+            padding: 2vh;
+
+            & p {
+                font-size: 16px;
+            }
         }
 
-        & button {
+        & .intro {
+            @include global-padding;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 15px;
+
+            & h2 {
+                margin: auto;
+                width: 80%;
+            }
+
+            & p {
+                font-size: 18px;
+                font-weight: 300;
+            }
+    
+            & button {
                 padding: 13px 18.75px;
-                border-radius: 25px;
+                border-radius: 25px;       
                 border: 0px;
+                width: fit-content;
                 color: white;
-                background: linear-gradient($second-color, $main-color);
+                align-self: center;
+                background: linear-gradient(#db6ad1, $main-color);
+                @include box-shadow;
         }
+
     }
+}

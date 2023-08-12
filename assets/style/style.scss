@@ -1,5 +1,13 @@
 @import "root";
 
+    * {
+        margin: 0;
+    }
+
+    main {
+
+    }
+
     .howto {
 
         display: flex;
@@ -9,6 +17,7 @@
         background-color: white;
         gap: 30px;
         box-sizing: border-box;
+        @include global-padding;
 
         &__card {
 
@@ -17,18 +26,35 @@
             justify-content: start;
             align-items: center;
             gap: 30px;
-            padding: 0px 15px;
+            padding: 25px 0px;
             border-radius: 25px;
+            width: 100%;
+            @include box-shadow; 
 
             & [class~=fa-solid] {
 
+                font-size: 18px;
                 color: #7e7e7e;
 
             }
 
-            & [class~=fa-shop] {
+            & [class~=fa-store] {
+
                 color: $main-color;
 
+            }
+
+            &--number {
+                margin-left: -10px;
+                border-radius: 25px 25px 25px 25px;
+                background-color: $main-color;
+                color: white;
+                width: fit-content;
+                height: fit-content;
+                padding: 4px 8px;
+                font-size: 14px;
+                font-style: normal;
+                text-align: center;
             }
         }
     }
@@ -39,11 +65,15 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 30px;
+        gap: 15px;
         width: 100%;
-        padding: 2vw;
+        @include global-padding;
         box-sizing: border-box;
         height: fit-content;
+
+        &__title {
+            align-self: flex-start;
+        }
 
         & a {
 
@@ -52,7 +82,7 @@
             height: 100%;
             width: 100%;
             box-sizing: border-box;
-            box-shadow: 0px 4px 15px rgb(0, 0, 0, 0.01);   
+            @include box-shadow;
             border-radius: 25px;
 
         }
@@ -89,7 +119,7 @@
                 align-items: flex-start;
                 padding: 15px;
 
-                & h2 {
+                & h3 {
 
                     font-size: 18px;
                     font-weight: 700;
@@ -97,60 +127,12 @@
 
                 }
 
-                & h3 {
+                & h4 {
 
                     font-size: 17px;
                     font-weight: 300;
                     margin: 0;
 
-                }
-
-                & [type~=checkbox] {
-
-                    display: none;
-
-                }
-
-                & label i {
-
-                    width: fit-content;
-                    color: gray;
-
-                }
-
-                & #heart:checked + label i {
-
-                    animation-duration: 0.3s;
-                    animation-name: add-favorite-restaurants;
-                    font-weight: 1000;
-                    background-image: -webkit-linear-gradient($second-color, $main-color);
-                    background-clip: text;
-                    -webkit-text-fill-color: transparent;
-
-                }
-
-
-                @keyframes add-favorite-restaurants {
-
-                    from {
-                        
-                        opacity: 0.1;
-                        font-weight: 1000;
-                        background-image: -webkit-linear-gradient($second-color, $main-color);
-                        background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                    }           
-                    
-                    to {
-
-                        opacity: 1;
-                        font-weight: 1000;
-                        background-image: -webkit-linear-gradient($second-color, $main-color);
-                        background-clip: text;
-                        -webkit-text-fill-color: transparent;
-            
-                    }
-                    
                 }
 
             }
