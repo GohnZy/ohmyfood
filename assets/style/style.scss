@@ -1,12 +1,7 @@
 @import "root";
 
-    * {
-        margin: 0;
-    }
 
-    main {
-
-    }
+/***** Page d'accueil *****/
 
     .howto {
 
@@ -87,6 +82,11 @@
 
         }
 
+        a:hover {
+            @include shadow-hover;
+            transition: 0.3s;
+        }
+
         &__card {
 
             display: flex;
@@ -119,28 +119,130 @@
                 align-items: flex-start;
                 padding: 15px;
 
-                & h3 {
-
-                    font-size: 18px;
-                    font-weight: 700;
-                    margin: 0;
-
-                }
-
-                & h4 {
-
-                    font-size: 17px;
-                    font-weight: 300;
-                    margin: 0;
-
-                }
-
             }
 
-            &--text {
-
-
-
-            }
         }    
     }
+
+
+
+/*** Pages des menus des restaurants ***/
+
+.side-page {
+
+    & img {
+        height: 275px;
+        width: 100%;
+        object-fit: cover;
+       
+    }
+
+}
+
+.menus {
+
+    background-color: $background-color;
+    position: relative;
+    margin-top: -60px;
+    @include global-padding;
+    border-radius: 50px 50px 0px 0px;
+    padding-top: 4vh;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    &__name {
+
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &__lists {
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &--products {
+
+        display: grid;
+        grid-template-columns: 10fr 1fr;
+        grid-template-rows: 19px 21px;
+        row-gap: 5px;
+        height: 69px;
+        background-color: white;
+        border-radius: 15px;
+        @include box-shadow;
+        box-sizing: border-box;
+        padding: 12px;
+
+        }
+
+        & h3 {
+
+            grid-column: 1/2;
+            grid-row: 1/2;
+   
+
+        }
+
+        & h4 {
+
+            grid-column: 1/2;
+            grid-row: 2/3;
+
+
+        }
+
+        & i {
+
+            grid-column: 2/3;
+            grid-row: 2/3;
+       
+
+        }
+
+    }
+
+    & .cheating-border {
+
+        width: 40px;
+        height: 3px;
+        background-color: $third-color;
+    }
+
+    & h1 {
+
+        font-size: 28px;
+        font-weight: 400;
+
+    }
+
+    & h2 {
+        
+        font-size: 16px;
+        font-weight: 300;
+
+    }
+
+
+    & h3 {
+
+        font-weight: 500;
+
+    }
+
+    & h4 {
+
+        font-size: 15px;
+
+    }
+
+    & button {
+        width: 186px;
+    }
+
+}

@@ -3,6 +3,11 @@ $second-color: #FF79DA;
 $third-color: #99E2D0;
 $background-color: #f6f6f6;
 
+* {
+    margin: 0;
+}
+
+
 @mixin global-padding {
 
     padding: 5vh 5vw 5vh 5vw;
@@ -11,7 +16,13 @@ $background-color: #f6f6f6;
 
 @mixin box-shadow {
 
-    box-shadow:  0px 4px 15px rgb(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 15px rgb(0, 0, 0, 0.1);
+
+}
+
+@mixin shadow-hover {
+
+    box-shadow: 0px 0px 20px rgb(0, 0, 0, 0.2);
 
 }
 
@@ -20,6 +31,12 @@ $background-color: #f6f6f6;
     font-size: 16px;
     font-weight: 500;
     box-sizing: border-box;
+}
+
+h1 {
+
+    font-family: 'Shrikhand';
+
 }
 
 h2 {
@@ -142,4 +159,67 @@ body {
 
     }
 
+}
+
+.menus {
+
+
+    & [type~=checkbox] {
+
+        display: none;
+
+    }
+
+    & label { 
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+    
+    }
+
+    & label i {
+
+        font-size: 25px;
+        color: black;
+
+    }
+
+    & #fav-1:checked + label i {
+
+        animation-duration: 0.3s;
+        animation-name: add-favorite-restaurants;
+        font-weight: 1000;
+        background-image: -webkit-linear-gradient($second-color, $main-color);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+    }
+
+
+}
+
+
+/*** ***/
+
+/*** Style des boutons ***/
+
+
+button {
+    padding: 13px 18.75px;
+    border-radius: 25px;       
+    border: 0px;
+    width: fit-content;
+    color: white;
+    align-self: center;
+    background: linear-gradient(#db6ad1, $main-color);
+    @include box-shadow;
+}
+
+button:hover {
+    filter: brightness(105%);
+    transition: 0.3s;
+    @include shadow-hover;
 }

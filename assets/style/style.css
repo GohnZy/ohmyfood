@@ -1,8 +1,16 @@
+* {
+  margin: 0;
+}
+
 :root {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
   box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Shrikhand";
 }
 
 h2 {
@@ -97,10 +105,51 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-* {
-  margin: 0;
+.menus [type~=checkbox] {
+  display: none;
+}
+.menus label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+}
+.menus label i {
+  font-size: 25px;
+  color: black;
+}
+.menus #fav-1:checked + label i {
+  animation-duration: 0.3s;
+  animation-name: add-favorite-restaurants;
+  font-weight: 1000;
+  background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
+/*** ***/
+/*** Style des boutons ***/
+button {
+  padding: 13px 18.75px;
+  border-radius: 25px;
+  border: 0px;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+  align-self: center;
+  background: linear-gradient(#db6ad1, #9356DC);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  filter: brightness(105%);
+  transition: 0.3s;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+/***** Page d'accueil *****/
 .howto {
   display: flex;
   flex-direction: column;
@@ -120,7 +169,7 @@ body {
   padding: 25px 0px;
   border-radius: 25px;
   width: 100%;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
 .howto__card [class~=fa-solid] {
   font-size: 18px;
@@ -165,8 +214,12 @@ body {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   border-radius: 25px;
+}
+.restaurants a:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
 }
 .restaurants__card {
   display: flex;
@@ -194,13 +247,80 @@ body {
   align-items: flex-start;
   padding: 15px;
 }
-.restaurants__card--content h3 {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 0;
+
+/*** Pages des menus des restaurants ***/
+.side-page img {
+  height: 275px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.restaurants__card--content h4 {
-  font-size: 17px;
+
+.menus {
+  background-color: #f6f6f6;
+  position: relative;
+  margin-top: -60px;
+  padding: 5vh 5vw 5vh 5vw;
+  border-radius: 50px 50px 0px 0px;
+  padding-top: 4vh;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.menus__name {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menus__lists {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.menus__lists--products {
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+  grid-template-rows: 19px 21px;
+  row-gap: 5px;
+  height: 69px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  padding: 12px;
+}
+.menus__lists h3 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.menus__lists h4 {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.menus__lists i {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.menus .cheating-border {
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+}
+.menus h1 {
+  font-size: 28px;
+  font-weight: 400;
+}
+.menus h2 {
+  font-size: 16px;
   font-weight: 300;
-  margin: 0;
+}
+.menus h3 {
+  font-weight: 500;
+}
+.menus h4 {
+  font-size: 15px;
+}
+.menus button {
+  width: 186px;
 }/*# sourceMappingURL=style.css.map */
