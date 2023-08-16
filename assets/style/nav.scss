@@ -1,0 +1,42 @@
+@import "root";
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        & .location {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            background-color: #EAEAEA;
+            padding: 2vh;
+
+            & p {
+                font-size: 16px;
+            }
+        }
+
+        & .intro {
+            @include global-padding;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 15px;
+
+            & h2 {
+                margin: auto;
+                width: 80%;
+            }
+
+            & p {
+                font-size: 18px;
+                font-weight: 300;
+            }
+
+        }
+    }
