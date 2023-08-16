@@ -1,6 +1,7 @@
 $main-color: #9356DC;
 $second-color: #FF79DA;
 $third-color: #99E2D0;
+$green-font: #008766;
 $background-color: #f6f6f6;
 
 * {
@@ -22,7 +23,7 @@ $background-color: #f6f6f6;
 
 @mixin shadow-hover {
 
-    box-shadow: 0px 0px 20px rgb(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 20px rgb(0, 0, 0, 0.15);
 
 }
 
