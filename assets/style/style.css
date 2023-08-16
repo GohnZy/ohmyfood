@@ -1,0 +1,359 @@
+* {
+  margin: 0;
+}
+
+:root {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Shrikhand";
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 17px;
+  font-weight: 300;
+}
+
+body {
+  margin: 0;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+}
+
+/*** Animation pour l'ajout des restaurants aux favoris ***/
+@keyframes add-favorite-restaurants {
+  from {
+    opacity: 0.1;
+    font-weight: 1000;
+    background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  to {
+    opacity: 1;
+    font-weight: 1000;
+    background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+.restaurants__card [type~=checkbox] {
+  display: none;
+}
+.restaurants__card label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+}
+.restaurants__card label i {
+  font-size: 20px;
+  color: black;
+}
+.restaurants__card #fav-1:checked + label i {
+  animation-duration: 0.3s;
+  animation-name: add-favorite-restaurants;
+  font-weight: 1000;
+  background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurants__card #fav-2:checked + label i {
+  animation-duration: 0.3s;
+  animation-name: add-favorite-restaurants;
+  font-weight: 1000;
+  background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurants__card #fav-3:checked + label i {
+  animation-duration: 0.3s;
+  animation-name: add-favorite-restaurants;
+  font-weight: 1000;
+  background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurants__card #fav-4:checked + label i {
+  animation-duration: 0.3s;
+  animation-name: add-favorite-restaurants;
+  font-weight: 1000;
+  background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.menus [type~=checkbox] {
+  display: none;
+}
+.menus label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+}
+.menus label i {
+  font-size: 25px;
+  color: black;
+}
+.menus #fav-1:checked + label i {
+  animation-duration: 0.3s;
+  animation-name: add-favorite-restaurants;
+  font-weight: 1000;
+  background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*** ***/
+/*** Style des boutons ***/
+button {
+  padding: 13px 18.75px;
+  border-radius: 25px;
+  border: 0px;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+  align-self: center;
+  background: linear-gradient(#db6ad1, #9356DC);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  filter: brightness(105%);
+  transition: 0.3s;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+}
+
+/***** Page d'accueil *****/
+.howto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  gap: 30px;
+  box-sizing: border-box;
+  padding: 5vh 5vw 5vh 5vw;
+}
+.howto__card {
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 30px;
+  padding: 25px 0px;
+  border-radius: 20px;
+  width: 100%;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+}
+.howto__card [class~=fa-solid] {
+  font-size: 18px;
+  color: #7e7e7e;
+}
+.howto__card [class~=fa-store] {
+  color: #9356DC;
+}
+.howto__card--number {
+  margin-left: -10px;
+  border-radius: 25px 25px 25px 25px;
+  background-color: #9356DC;
+  color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 4px 8px;
+  font-size: 14px;
+  font-style: normal;
+  text-align: center;
+}
+.howto__card p {
+  position: absolute;
+  width: 90vw;
+  text-align: center;
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  padding: 5vh 5vw 5vh 5vw;
+  box-sizing: border-box;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.restaurants__title {
+  align-self: flex-start;
+}
+.restaurants a {
+  text-decoration: none;
+  color: black;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+.restaurants a:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+}
+.restaurants :nth-child(3) img {
+  -o-object-position: 50% 62%;
+     object-position: 50% 62%;
+}
+.restaurants__card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 251px;
+  box-sizing: border-box;
+}
+.restaurants__card .new-restaurant {
+  height: 29px;
+  width: 80px;
+  position: absolute;
+  z-index: 3;
+  color: #008766;
+  border-radius: 2px;
+  background-color: #99E2D0;
+  font-size: 14px;
+  text-align: center;
+  padding-top: 6.5px;
+  box-sizing: border-box;
+  right: 8vw;
+  margin-top: 12px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+}
+.restaurants__card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
+  width: 100%;
+  height: 70%;
+  border-radius: 15px 15px 0px 0px;
+}
+.restaurants__card--content {
+  background-color: white;
+  border-radius: 0px 0px 15px 15px;
+  height: 30%;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px;
+}
+
+/*** Pages des menus des restaurants ***/
+.side-page img {
+  height: 275px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menus {
+  background-color: #f6f6f6;
+  position: relative;
+  margin-top: -60px;
+  padding: 5vh 5vw 5vh 5vw;
+  border-radius: 50px 50px 0px 0px;
+  padding-top: 4vh;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.menus__name {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menus__lists {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.menus__lists--products {
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+  grid-template-rows: 19px 21px;
+  row-gap: 5px;
+  height: 69px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  padding: 12px;
+}
+.menus__lists h3 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.menus__lists h4 {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.menus__lists i {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.menus .cheating-border {
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+}
+.menus h1 {
+  font-size: 28px;
+  font-weight: 400;
+}
+.menus h2 {
+  font-size: 16px;
+  font-weight: 300;
+}
+.menus h3 {
+  font-weight: 500;
+}
+.menus h4 {
+  font-size: 15px;
+}
+.menus button {
+  width: 186px;
+}
+.menus .selected-product {
+  width: 59px;
+  background-color: #99E2D0;
+  color: white;
+  font-weight: 100;
+}/*# sourceMappingURL=style.css.map */
