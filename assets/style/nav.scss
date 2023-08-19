@@ -28,6 +28,12 @@
             justify-content: center;
             gap: 15px;
 
+            @media (min-width:1024px) {
+
+                padding: 3vh 5vw;
+
+            }
+
             & h2 {
                 margin: auto;
                 width: 80%;

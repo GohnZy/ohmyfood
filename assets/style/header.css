@@ -54,57 +54,81 @@ body {
     -webkit-text-fill-color: transparent;
   }
 }
-.restaurants__card [type~=checkbox] {
-  display: none;
-}
-.restaurants__card label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 25px;
-  height: 25px;
-}
-.restaurants__card label i {
-  font-size: 20px;
-  color: black;
-}
-.restaurants__card #fav-1:checked + label i {
-  animation-duration: 0.3s;
-  animation-name: add-favorite-restaurants;
-  font-weight: 1000;
-  background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.restaurants__card #fav-2:checked + label i {
-  animation-duration: 0.3s;
-  animation-name: add-favorite-restaurants;
-  font-weight: 1000;
-  background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.restaurants__card #fav-3:checked + label i {
-  animation-duration: 0.3s;
-  animation-name: add-favorite-restaurants;
-  font-weight: 1000;
-  background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.restaurants__card #fav-4:checked + label i {
-  animation-duration: 0.3s;
-  animation-name: add-favorite-restaurants;
-  font-weight: 1000;
-  background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
+/***
+
+.restaurants__card { 
+
+    & [type~=checkbox] {
+
+        display: none;
+
+    }
+
+    & label { 
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 25px;
+
+    }
+
+    & label i {
+
+        font-size: 20px;
+        color: black;
+
+    }
+
+    & #fav-1:checked + label i {
+
+        animation-duration: 0.3s;
+        animation-name: add-favorite-restaurants;
+        font-weight: 1000;
+        background-image: -webkit-linear-gradient($second-color, $main-color);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+    }
+
+    & #fav-2:checked + label i {
+
+        animation-duration: 0.3s;
+        animation-name: add-favorite-restaurants;
+        font-weight: 1000;
+        background-image: -webkit-linear-gradient($second-color, $main-color);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+    }
+
+    & #fav-3:checked + label i {
+
+        animation-duration: 0.3s;
+        animation-name: add-favorite-restaurants;
+        font-weight: 1000;
+        background-image: -webkit-linear-gradient($second-color, $main-color);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+    }
+
+    & #fav-4:checked + label i {
+
+        animation-duration: 0.3s;
+        animation-name: add-favorite-restaurants;
+        font-weight: 1000;
+        background-image: -webkit-linear-gradient($second-color, $main-color);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+    }
+
 }
 
+
+***/
 .menus [type~=checkbox] {
   display: none;
 }
@@ -153,13 +177,19 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10vh;
-  width: 100%;
+  min-height: 63px;
+  min-width: 100vw;
   background-color: white;
 }
 header img {
-  width: 60%;
-  height: 60%;
+  width: 162px;
+  height: 44px;
+}
+@media (min-width: 778px) {
+  header {
+    min-width: 200px;
+    min-height: 96px;
+  }
 }
 header a {
   position: absolute;

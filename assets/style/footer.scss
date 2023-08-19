@@ -8,10 +8,26 @@ footer {
     flex-direction: column;
     gap: 10px;
 
+    @media (min-width:778px) {
+
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+
+    }
+
     & h5 {
         font-family: 'Shrikhand';
         font-weight: 400;
         font-size: 18px;
+        text-align: center;
+
+        @media (min-width:778px) {
+
+            order: 5;
+            margin-left: 2.5vw;
+    
+        }
     }
 
     & p {
@@ -22,6 +38,7 @@ footer {
         text-decoration: none;
         color: white;
         font-weight: 500;
+
 
         & div {
             display: flex;
@@ -37,4 +54,15 @@ footer {
     & :nth-child(1n+4) {
         font-weight: 400;
     }
+    
+    & :nth-child(4) {
+
+        @media (min-width:778px) {
+
+            margin-left: 2.5vw;
+    
+        }
+    }
+
+
 }

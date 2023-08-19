@@ -54,57 +54,81 @@ body {
     -webkit-text-fill-color: transparent;
   }
 }
-.restaurants__card [type~=checkbox] {
-  display: none;
-}
-.restaurants__card label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 25px;
-  height: 25px;
-}
-.restaurants__card label i {
-  font-size: 20px;
-  color: black;
-}
-.restaurants__card #fav-1:checked + label i {
-  animation-duration: 0.3s;
-  animation-name: add-favorite-restaurants;
-  font-weight: 1000;
-  background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.restaurants__card #fav-2:checked + label i {
-  animation-duration: 0.3s;
-  animation-name: add-favorite-restaurants;
-  font-weight: 1000;
-  background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.restaurants__card #fav-3:checked + label i {
-  animation-duration: 0.3s;
-  animation-name: add-favorite-restaurants;
-  font-weight: 1000;
-  background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.restaurants__card #fav-4:checked + label i {
-  animation-duration: 0.3s;
-  animation-name: add-favorite-restaurants;
-  font-weight: 1000;
-  background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
+/***
+
+.restaurants__card { 
+
+    & [type~=checkbox] {
+
+        display: none;
+
+    }
+
+    & label { 
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 25px;
+
+    }
+
+    & label i {
+
+        font-size: 20px;
+        color: black;
+
+    }
+
+    & #fav-1:checked + label i {
+
+        animation-duration: 0.3s;
+        animation-name: add-favorite-restaurants;
+        font-weight: 1000;
+        background-image: -webkit-linear-gradient($second-color, $main-color);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+    }
+
+    & #fav-2:checked + label i {
+
+        animation-duration: 0.3s;
+        animation-name: add-favorite-restaurants;
+        font-weight: 1000;
+        background-image: -webkit-linear-gradient($second-color, $main-color);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+    }
+
+    & #fav-3:checked + label i {
+
+        animation-duration: 0.3s;
+        animation-name: add-favorite-restaurants;
+        font-weight: 1000;
+        background-image: -webkit-linear-gradient($second-color, $main-color);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+    }
+
+    & #fav-4:checked + label i {
+
+        animation-duration: 0.3s;
+        animation-name: add-favorite-restaurants;
+        font-weight: 1000;
+        background-image: -webkit-linear-gradient($second-color, $main-color);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+    }
+
 }
 
+
+***/
 .menus [type~=checkbox] {
   display: none;
 }
@@ -151,16 +175,44 @@ button:hover {
 
 /***** Page d'accueil *****/
 .howto {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   background-color: white;
-  gap: 30px;
-  box-sizing: border-box;
-  padding: 5vh 5vw 5vh 5vw;
+  width: 100%;
 }
 .howto__card {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  gap: 30px;
+  max-width: 1080px;
+  box-sizing: border-box;
+  padding: 5vh 0;
+  margin: auto;
+}
+@media (min-width: 1070px) {
+  .howto__card {
+    justify-content: space-between;
+    padding: 5vh 20px;
+  }
+}
+@media (min-width: 676px) {
+  .howto__card {
+    padding: 5vh 20px;
+  }
+}
+.howto__card h2 {
+  align-self: flex-start;
+  flex-basis: 100%;
+  max-width: 1440px;
+  padding-left: 5vw;
+}
+@media (min-width: 1070px) {
+  .howto__card h2 {
+    padding-left: 0;
+  }
+}
+.howto__card--step {
   background-color: #f6f6f6;
   display: flex;
   justify-content: start;
@@ -168,17 +220,17 @@ button:hover {
   gap: 30px;
   padding: 25px 0px;
   border-radius: 20px;
-  width: 100%;
+  width: 323px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
 }
-.howto__card [class~=fa-solid] {
+.howto__card--step [class~=fa-solid] {
   font-size: 18px;
   color: #7e7e7e;
 }
-.howto__card [class~=fa-store] {
+.howto__card--step [class~=fa-store] {
   color: #9356DC;
 }
-.howto__card--number {
+.howto__card--step .step-number {
   margin-left: -10px;
   border-radius: 25px 25px 25px 25px;
   background-color: #9356DC;
@@ -190,11 +242,6 @@ button:hover {
   padding: 4px 8px;
   font-size: 14px;
   font-style: normal;
-  text-align: center;
-}
-.howto__card p {
-  position: absolute;
-  width: 90vw;
   text-align: center;
 }
 
@@ -210,8 +257,16 @@ button:hover {
   height: -moz-fit-content;
   height: fit-content;
 }
+@media (min-width: 778px) {
+  .restaurants {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 35px 8%;
+  }
+}
 .restaurants__title {
   align-self: flex-start;
+  flex-basis: 100%;
 }
 .restaurants a {
   text-decoration: none;
@@ -234,8 +289,32 @@ button:hover {
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 490px;
   height: 251px;
   box-sizing: border-box;
+  position: relative;
+}
+@media (min-width: 778px) {
+  .restaurants__card {
+    min-width: 251px;
+    width: 45%;
+    flex: 1 1 auto;
+  }
+}
+.restaurants__card i {
+  color: black;
+  font-size: 22px;
+  position: absolute;
+  top: 80%;
+  right: 6%;
+}
+.restaurants__card i:focus {
+  transition: 0.3s;
+  font-weight: 1000;
+  background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .restaurants__card .new-restaurant {
   height: 29px;
@@ -249,7 +328,7 @@ button:hover {
   text-align: center;
   padding-top: 6.5px;
   box-sizing: border-box;
-  right: 8vw;
+  right: 5%;
   margin-top: 12px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
 }
@@ -276,11 +355,27 @@ button:hover {
 }
 
 /*** Pages des menus des restaurants ***/
+.side-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 778px) {
+  .side-page {
+    background-color: white;
+  }
+}
 .side-page img {
   height: 275px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (min-width: 778px) {
+  .side-page img {
+    height: 383px;
+  }
 }
 
 .menus {
@@ -289,10 +384,18 @@ button:hover {
   margin-top: -60px;
   padding: 5vh 5vw 5vh 5vw;
   border-radius: 50px 50px 0px 0px;
-  padding-top: 4vh;
+  padding-top: 4vh 5vw;
   display: flex;
   flex-direction: column;
   gap: 35px;
+  max-width: 1055px;
+}
+@media (min-width: 778px) {
+  .menus {
+    width: 80%;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 15px rgba(1, 1, 1, 0.1);
+  }
 }
 .menus__name {
   width: 95%;
@@ -307,7 +410,7 @@ button:hover {
 }
 .menus__lists--products {
   display: grid;
-  grid-template-columns: 10fr 1fr;
+  grid-template-columns: 10fr 0fr;
   grid-template-rows: 19px 21px;
   row-gap: 5px;
   height: 69px;
@@ -328,6 +431,9 @@ button:hover {
 .menus__lists i {
   grid-column: 2/3;
   grid-row: 2/3;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: 0px;
 }
 .menus .cheating-border {
   width: 40px;
