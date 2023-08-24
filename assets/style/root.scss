@@ -91,9 +91,6 @@ body {
     
 }
 
-
-/***
-
 .restaurants__card { 
 
     & [type~=checkbox] {
@@ -165,10 +162,6 @@ body {
 
 }
 
-
-***/
-
-
 .menus {
 
 
@@ -197,12 +190,8 @@ body {
 
     & #fav-1:checked + label i {
 
-        animation-duration: 0.3s;
-        animation-name: add-favorite-restaurants;
-        font-weight: 1000;
-        background-image: -webkit-linear-gradient($second-color, $main-color);
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+        animation: add-favorite-restaurants forwards;
+
 
     }
 
@@ -230,4 +219,5 @@ button:hover {
     filter: brightness(105%);
     transition: 0.3s;
     @include shadow-hover;
+    cursor: pointer;
 }
