@@ -97,6 +97,7 @@
 
 .restaurants {
 
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -133,6 +134,7 @@
 
         text-decoration: none;
         color: black;
+        background-color: white;
         height: 100%;
         width: 100%;
         box-sizing: border-box;
@@ -158,6 +160,22 @@
         height: 251px;  
         box-sizing: border-box;
         position: relative;
+        animation: resize 0s linear 1 2.4s backwards;
+
+
+        @keyframes resize {
+            from {
+                position: absolute;
+
+            }
+
+            to {
+
+                position: absolute;
+            }
+
+
+        }
 
         @media (min-width:778px) {
 
@@ -303,12 +321,13 @@
     gap: 35px;
     max-width: 1055px;
     width: 90%;
+    box-sizing: border-box;
+
 
 
     @media (min-width:778px) {
 
         width: 80%;
-        box-sizing: border-box;
         box-shadow: 0px 0px 15px rgba(1,1,1,0.1);
 
     }
@@ -369,6 +388,7 @@
             box-sizing: border-box;
             padding: 12px;
             position: relative;
+            overflow: hidden;
    
 
             & .selected-product {
@@ -376,7 +396,6 @@
                 height: 100%;
                 background-color: $third-color;
                 color: white;
-                font-weight: 100;
                 font-size: 22px;
                 position: absolute;   
                 top: 0;
@@ -385,7 +404,11 @@
                 justify-content: center;
                 align-items: center;
                 border-radius: 0px 15px 15px 0px;
-                transform: scale(0, 1);       
+                transform: scale(0, 1); 
+                
+                & i {
+
+                }
                 
             }
 
