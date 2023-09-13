@@ -1,18 +1,15 @@
 @import "root";
 
-
- 
 .homepage-nav .location {
 
-    animation: show-nav 0.6s ease 2.4s forwards;
+    animation: show-nav 0.6s ease 2s forwards;
     position: relative;
     
     width: 100%;
 
     @media (min-width:778px) {
 
-        
-        
+                
     }
 
 }
@@ -26,7 +23,6 @@
 
 }
 
-
 100% {
 
     transform: translateY(0%);
@@ -37,67 +33,81 @@
 
 }
 
-    nav {
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    & .location {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        background-color: #EAEAEA;
+        padding: 2vh 0;
+
+        & p {
+            font-size: 16px;
+        }
+    }
+
+    & .intro {
+        padding:  $global-padding;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        text-align: center;
+        gap: 15px;
 
-        & .location {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            background-color: #EAEAEA;
-            padding: 2vh 0;
+        @media (min-width:1024px) {
 
-            & p {
-                font-size: 16px;
-            }
-        }
-
-        & .intro {
-            @include global-padding;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 15px;
-
-            @media (min-width:1024px) {
-
-                padding: 3vh 5vw;
-
-            }
-
-            & h2 {
-                margin: auto;
-                width: 80%;
-            }
-
-            & p {
-                font-size: 18px;
-                font-weight: 300;
-            }
+            padding: 3vh 5vw;
+            gap: 25px;
 
         }
-    }
 
-    .side-nav {
-
-        animation: hide-nav 1.2s ease 1  forwards;
-        position: absolute;
-        top: 6vh;
-        width: 100%;
-
-        @media (min-width:778px) {
-
-            top: 10vh;
+        & h2 {
+            margin: auto;
+            width: 80%;
             
+            @media (min-width: 1024px) {
+
+                font-size: 40px;
+                width: max-content;
+                
+            }
+        }
+
+        & p {
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        & button {
+
+            width: 218px;
+
         }
 
     }
+}
+
+.side-nav {
+
+    animation: hide-nav 1.2s ease 1  forwards;
+    position: absolute;
+    top: 6vh;
+    width: 100%;
+
+    @media (min-width:778px) {
+
+        top: 10vh;
+        
+    }
+
+}
 
 @keyframes hide-nav {
 

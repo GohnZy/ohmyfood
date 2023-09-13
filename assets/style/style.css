@@ -11,6 +11,7 @@
 
 h1 {
   font-family: "Shrikhand";
+  font-size: 28px;
 }
 
 h2 {
@@ -54,76 +55,6 @@ body {
     -webkit-text-fill-color: transparent;
   }
 }
-.restaurants__card [type~=checkbox] {
-  display: none;
-}
-.restaurants__card label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 25px;
-  height: 25px;
-}
-.restaurants__card label i {
-  font-size: 20px;
-  color: black;
-}
-.restaurants__card #fav-1:checked + label i {
-  animation-duration: 0.3s;
-  animation-name: add-favorite-restaurants;
-  font-weight: 1000;
-  background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.restaurants__card #fav-2:checked + label i {
-  animation-duration: 0.3s;
-  animation-name: add-favorite-restaurants;
-  font-weight: 1000;
-  background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.restaurants__card #fav-3:checked + label i {
-  animation-duration: 0.3s;
-  animation-name: add-favorite-restaurants;
-  font-weight: 1000;
-  background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.restaurants__card #fav-4:checked + label i {
-  animation-duration: 0.3s;
-  animation-name: add-favorite-restaurants;
-  font-weight: 1000;
-  background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.menus [type~=checkbox] {
-  display: none;
-}
-.menus label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 35px;
-  height: 35px;
-}
-.menus label i {
-  font-size: 25px;
-  color: black;
-}
-.menus #fav-1:checked + label i {
-  animation: add-favorite-restaurants forwards;
-}
-
-/*** ***/
 /*** Style des boutons ***/
 button {
   padding: 13px 18.75px;
@@ -136,18 +67,21 @@ button {
   background: linear-gradient(#db6ad1, #9356DC);
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
-
 button:hover {
   filter: brightness(105%);
-  transition: 0.3s;
+  transition: 0.15s;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+}
+button:not(:hover) {
+  transition: 0.3s;
 }
 
 /***** Page d'accueil *****/
 .howto {
   background-color: white;
   width: 100%;
+  animation: resize 0s linear 1 2s backwards;
 }
 .howto__card {
   flex-wrap: wrap;
@@ -158,28 +92,12 @@ button:hover {
   gap: 30px;
   max-width: 1080px;
   box-sizing: border-box;
-  padding: 5vh 5vw 5vh 5vw;
+  padding: 2.5rem 2.5rem 2.5rem 2.5rem;
   margin: auto;
-}
-@media (min-width: 1070px) {
-  .howto__card {
-    justify-content: space-between;
-  }
-}
-@media (min-width: 676px) {
-  .howto__card {
-    padding: 5vh 1px;
-  }
 }
 .howto__card h2 {
   align-self: flex-start;
   flex-basis: 100%;
-  padding-left: 5vw;
-}
-@media (min-width: 1070px) {
-  .howto__card h2 {
-    padding-left: 0;
-  }
 }
 .howto__card--step {
   background-color: #f6f6f6;
@@ -220,14 +138,15 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 18px;
   width: 100%;
   max-width: 1080px;
-  padding: 5vh 5vw 5vh 5vw;
+  padding: 2.5rem 2.5rem 2.5rem 2.5rem;
   box-sizing: border-box;
   height: -moz-fit-content;
   height: fit-content;
   margin: auto;
+  animation: resize 0s linear 1 2s backwards;
 }
 @media (min-width: 778px) {
   .restaurants {
@@ -235,34 +154,6 @@ button:hover {
     flex-wrap: wrap;
     gap: 35px 7%;
   }
-}
-@media (min-width: 1070px) {
-  .restaurants {
-    padding: 5vh 0px;
-  }
-}
-.restaurants__title {
-  align-self: flex-start;
-  flex-basis: 100%;
-  max-width: 1080px;
-}
-.restaurants a {
-  text-decoration: none;
-  color: black;
-  background-color: white;
-  height: 100%;
-  width: 100%;
-  box-sizing: border-box;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-}
-.restaurants a:hover {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
-  transition: 0.3s;
-}
-.restaurants :nth-child(3) img {
-  -o-object-position: 50% 62%;
-     object-position: 50% 62%;
 }
 .restaurants__card {
   display: flex;
@@ -272,15 +163,6 @@ button:hover {
   height: 251px;
   box-sizing: border-box;
   position: relative;
-  animation: resize 0s linear 1 2.4s backwards;
-}
-@keyframes resize {
-  from {
-    position: absolute;
-  }
-  to {
-    position: absolute;
-  }
 }
 @media (min-width: 778px) {
   .restaurants__card {
@@ -333,6 +215,83 @@ button:hover {
   align-items: flex-start;
   padding: 15px;
 }
+.restaurants__card [type~=checkbox] {
+  display: none;
+}
+.restaurants__card label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+}
+.restaurants__card label i {
+  font-size: 20px;
+  color: black;
+}
+.restaurants__card #fav-1:checked + label i {
+  animation-duration: 0.3s;
+  animation-name: add-favorite-restaurants;
+  font-weight: 1000;
+  background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurants__card #fav-2:checked + label i {
+  animation-duration: 0.3s;
+  animation-name: add-favorite-restaurants;
+  font-weight: 1000;
+  background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurants__card #fav-3:checked + label i {
+  animation-duration: 0.3s;
+  animation-name: add-favorite-restaurants;
+  font-weight: 1000;
+  background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurants__card #fav-4:checked + label i {
+  animation-duration: 0.3s;
+  animation-name: add-favorite-restaurants;
+  font-weight: 1000;
+  background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurants__title {
+  align-self: flex-start;
+  flex-basis: 100%;
+  max-width: 1080px;
+  padding-left: 0;
+}
+.restaurants a {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+.restaurants a:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+}
+.restaurants a:not(:hover) {
+  transition: 0.6s;
+}
+.restaurants :nth-child(3) img {
+  -o-object-position: 50% 62%;
+     object-position: 50% 62%;
+}
 
 /*** Pages des menus des restaurants ***/
 .side-page {
@@ -380,20 +339,38 @@ button:hover {
   background-color: #f6f6f6;
   position: relative;
   margin-top: -60px;
-  padding: 5vh 5vw 5vh 5vw;
+  padding: 2.5rem 2.5rem 2.5rem 2.5rem;
   border-radius: 50px 50px 0px 0px;
-  padding: 4vh 5vw;
+  padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 35px;
   max-width: 1055px;
-  width: 90%;
+  width: 100%;
   box-sizing: border-box;
+}
+.menus [type~=checkbox] {
+  display: none;
+}
+.menus label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+}
+.menus label i {
+  font-size: 25px;
+  color: black;
+}
+.menus #fav-1:checked + label i {
+  animation: add-favorite-restaurants forwards;
 }
 @media (min-width: 778px) {
   .menus {
     width: 80%;
     box-shadow: 0px 0px 15px rgba(1, 1, 1, 0.1);
+    padding: 5rem 12rem;
   }
 }
 .menus__name {
@@ -404,6 +381,7 @@ button:hover {
 }
 .menus button {
   width: 186px;
+  height: 50px;
 }
 .menus__lists {
   display: flex;
@@ -486,7 +464,7 @@ button:hover {
   overflow: hidden;
 }
 .menus__lists--products:hover h3 {
-  width: 78%;
+  width: 90%;
   transition: ease-in-out 0.25s;
 }
 .menus__lists--products:not(:hover) h3 {
@@ -503,7 +481,7 @@ button:hover {
   overflow: hidden;
 }
 .menus__lists--products:hover h4 {
-  width: 78%;
+  width: 75%;
   transition: ease-in-out 0.25s;
 }
 .menus__lists--products:not(:hover) h4 {

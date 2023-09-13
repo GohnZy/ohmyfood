@@ -7,6 +7,8 @@
 
     background-color: white;
     width: 100%;
+    animation: resize 0s linear 1 2s backwards;
+
    
 
     &__card {
@@ -19,36 +21,14 @@
     gap: 30px;
     max-width: 1080px;
     box-sizing: border-box;
-    @include global-padding;
+    padding: $global-padding;
     margin: auto;
-    
-
-    @media (min-width:1070px) {
-
-        justify-content: space-between;
-        
-
-    }
-
-    @media (min-width:676px) {
-
-        padding: 5vh 1px;
-
-    }
-   
     
 
         & h2 {
             align-self: flex-start;
             flex-basis: 100%;
-            padding-left: 5vw;
-
-            @media (min-width:1070px) {
-
-                padding-left: 0;
-                
-        
-            }
+            
 
         }
 
@@ -63,8 +43,7 @@
             padding: 25px 0px;
             border-radius: 20px;
             width: 323px;
-            @include shadow-hover; 
-
+            box-shadow: $shadow-hover;
             
             & [class~=fa-solid] {
 
@@ -102,56 +81,30 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 18px;
     width: 100%;
     max-width: 1080px;
-    @include global-padding;
+    padding: $global-padding;
     box-sizing: border-box;
     height: fit-content;
     margin: auto;
+    animation: resize 0s linear 1 2s backwards;
+
+ 
 
     @media (min-width:778px) {
 
         flex-direction: row;
         flex-wrap: wrap;
         gap:35px 7%;
-        
+    }
+
+    @media (min-width:676px) {
+
 
     }
 
-    @media (min-width:1070px) {
-        padding: 5vh 0px;
-    }
-
-    &__title {
-        align-self: flex-start;
-        flex-basis: 100%;
-        max-width: 1080px;
-        
-    }
-
-    & a {
-
-        text-decoration: none;
-        color: black;
-        background-color: white;
-        height: 100%;
-        width: 100%;
-        box-sizing: border-box;
-        @include box-shadow;
-        border-radius: 15px;
-    }
-
-    a:hover {
-        @include shadow-hover;
-        transition: 0.3s;
-    }
-
-    & :nth-child(3) img {
-        object-position: 50% 62%;
-    }
-
-    &__card {
+    &__card {    
 
         display: flex;
         flex-direction: column;
@@ -160,32 +113,15 @@
         height: 251px;  
         box-sizing: border-box;
         position: relative;
-        animation: resize 0s linear 1 2.4s backwards;
+        
 
+            @media (min-width:778px) {
 
-        @keyframes resize {
-            from {
-                position: absolute;
-
+                min-width: 251px;
+                width: 45%;
+                flex: 1 1 auto;
+                
             }
-
-            to {
-
-                position: absolute;
-            }
-
-
-        }
-
-        @media (min-width:778px) {
-
-            min-width: 251px;
-            width: 45%;
-            flex: 1 1 auto;
-            
-
-        }
-
 
         & i {
 
@@ -211,7 +147,7 @@
             box-sizing: border-box;
             right: 5%;
             margin-top: 12px;
-            @include shadow-hover;
+            box-shadow:  $shadow-hover;
         }
 
 
@@ -241,10 +177,112 @@
 
         }
 
-    }    
+        & [type~=checkbox] {
+    
+            display: none;
+    
+        }
+    
+        & label { 
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 25px;
+            height: 25px;
+        
+        }
+    
+        & label i {
+    
+            font-size: 20px;
+            color: black;
+    
+        }
+    
+        & #fav-1:checked + label i {
+    
+            animation-duration: 0.3s;
+            animation-name: add-favorite-restaurants;
+            font-weight: 1000;
+            background-image: -webkit-linear-gradient($second-color, $main-color);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+    
+        }
+    
+        & #fav-2:checked + label i {
+    
+            animation-duration: 0.3s;
+            animation-name: add-favorite-restaurants;
+            font-weight: 1000;
+            background-image: -webkit-linear-gradient($second-color, $main-color);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+    
+        }
+    
+        & #fav-3:checked + label i {
+    
+            animation-duration: 0.3s;
+            animation-name: add-favorite-restaurants;
+            font-weight: 1000;
+            background-image: -webkit-linear-gradient($second-color, $main-color);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+    
+        }
+    
+        & #fav-4:checked + label i {
+    
+            animation-duration: 0.3s;
+            animation-name: add-favorite-restaurants;
+            font-weight: 1000;
+            background-image: -webkit-linear-gradient($second-color, $main-color);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+    
+        }
+    
+    }
+
+    &__title {
+        align-self: flex-start;
+        flex-basis: 100%;
+        max-width: 1080px;
+        padding-left: 0;
+        
+    }
+
+    & a {
+
+        text-decoration: none;
+        color: black;
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        box-shadow: $box-shadow;
+        border-radius: 15px;
+    
+        &:hover {
+            box-shadow:  $shadow-hover;
+            transition: 0.3s;
+        }
+
+        &:not(:hover) {
+
+            transition: 0.6s
+
+        }
+
+    }
+
+    & :nth-child(3) img {
+        object-position: 50% 62%;
+    }
+    
 }
-
-
 
 /*** Pages des menus des restaurants ***/
 
@@ -313,22 +351,51 @@
     background-color: $background-color;
     position: relative;
     margin-top: -60px;
-    @include global-padding;
+    padding: $global-padding;
     border-radius: 50px 50px 0px 0px;
-    padding: 4vh 5vw;
+    padding: 2rem 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 35px;
     max-width: 1055px;
-    width: 90%;
+    width: 100%;
     box-sizing: border-box;
 
+    & [type~=checkbox] {
 
+        display: none;
+
+    }
+
+    & label { 
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+    
+    }
+
+    & label i {
+
+        font-size: 25px;
+        color: black;
+
+    }
+
+    & #fav-1:checked + label i {
+
+        animation: add-favorite-restaurants forwards;
+
+
+    }
 
     @media (min-width:778px) {
 
         width: 80%;
         box-shadow: 0px 0px 15px rgba(1,1,1,0.1);
+        padding: 5rem 12rem;
 
     }
 
@@ -343,6 +410,7 @@
 
     & button {
         width: 186px;
+        height: 50px;
     }
 
 
@@ -384,7 +452,7 @@
             height: 69px;
             background-color: white;
             border-radius: 15px;
-            @include shadow-hover;
+            box-shadow:  $shadow-hover;
             box-sizing: border-box;
             padding: 12px;
             position: relative;
@@ -460,7 +528,7 @@
 
             &:hover h3 {
 
-                width: calc(78%);
+                width: calc(90%);
                 transition: ease-in-out .25s;
 
             }
@@ -485,7 +553,7 @@
 
             &:hover h4 {
 
-                width: calc(78%);
+                width: calc(75%);
                 transition: ease-in-out 0.25s;
 
             }

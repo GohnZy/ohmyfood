@@ -1,39 +1,37 @@
 @import "root";
 
-    header {
+header {
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 63px; 
-        min-width: 100vw;
-        background-color: white;
-        z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 63px; 
+    min-width: 100vw;
+    background-color: white;
+    z-index: 3;
 
-        & img {
+    @media (min-width:778px) {
 
-            width: 162px;
-            height: 44px;
+        min-width: 200px;
+        min-height: 96px;
 
-        }
+    }
 
-        @media (min-width:778px) {
+    & img {
 
-            min-width: 200px;
-            min-height: 96px;
+        width: 162px;
+        height: 44px;
 
-        }
+    }
 
-        & a {
+    & a {
 
-            position: absolute;
-            left: 0;
-            padding-left: 5vw;
-            font-size: 17px;
+        position: absolute;
+        left: 0;
+        padding-left: 5rem;
+        font-size: 17px;
 
-        }
-
-        & a:hover{
+        &:hover{
 
             filter: brightness(105%);
             transition: 0.3s;
@@ -41,3 +39,5 @@
         }
 
     }
+
+}
