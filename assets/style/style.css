@@ -341,13 +341,19 @@ button:not(:hover) {
   margin-top: -60px;
   padding: 2.5rem 2.5rem 2.5rem 2.5rem;
   border-radius: 50px 50px 0px 0px;
-  padding: 2rem 1.5rem;
+  padding: 3.5rem 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 35px;
   max-width: 1055px;
   width: 100%;
   box-sizing: border-box;
+}
+@media (min-width: 778px) {
+  .menus {
+    width: 80%;
+    box-shadow: 0px 0px 15px rgba(1, 1, 1, 0.1);
+  }
 }
 .menus [type~=checkbox] {
   display: none;
@@ -366,18 +372,18 @@ button:not(:hover) {
 .menus #fav-1:checked + label i {
   animation: add-favorite-restaurants forwards;
 }
-@media (min-width: 778px) {
-  .menus {
-    width: 80%;
-    box-shadow: 0px 0px 15px rgba(1, 1, 1, 0.1);
-    padding: 5rem 12rem;
-  }
-}
 .menus__name {
   width: 95%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 1rem;
+  margin: auto;
+}
+@media (min-width: 396px) {
+  .menus__name {
+    gap: 35px;
+  }
 }
 .menus button {
   width: 186px;
@@ -387,19 +393,19 @@ button:not(:hover) {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin: auto;
+  max-width: 634px;
+  width: 100%;
 }
 .menus__lists .cheating-border {
   width: 40px;
   height: 3px;
   background-color: #99E2D0;
 }
-.menus__lists h1 {
-  font-size: 28px;
-  font-weight: 400;
-}
 .menus__lists h2 {
   font-size: 16px;
   font-weight: 300;
+  margin-bottom: -3px;
 }
 .menus__lists--products {
   display: grid;
@@ -407,6 +413,8 @@ button:not(:hover) {
   grid-template-rows: 19px 21px;
   row-gap: 5px;
   height: 69px;
+  max-width: 634px;
+  width: 100%;
   background-color: white;
   border-radius: 15px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
@@ -414,6 +422,7 @@ button:not(:hover) {
   padding: 12px;
   position: relative;
   overflow: hidden;
+  margin: auto;
 }
 .menus__lists--products .selected-product {
   width: 59px;

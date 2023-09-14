@@ -353,13 +353,22 @@
     margin-top: -60px;
     padding: $global-padding;
     border-radius: 50px 50px 0px 0px;
-    padding: 2rem 1.5rem;
+    padding: 3.5rem 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 35px;
     max-width: 1055px;
     width: 100%;
     box-sizing: border-box;
+
+    
+    @media (min-width:778px) {
+
+        width: 80%;
+        box-shadow: 0px 0px 15px rgba(1,1,1,0.1);
+
+
+    }
 
     & [type~=checkbox] {
 
@@ -391,20 +400,20 @@
 
     }
 
-    @media (min-width:778px) {
-
-        width: 80%;
-        box-shadow: 0px 0px 15px rgba(1,1,1,0.1);
-        padding: 5rem 12rem;
-
-    }
-
     &__name {
 
         width: 95%;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+        gap: 1rem;
+        margin: auto;
+
+        @media (min-width: 396px) {
+            
+            gap: 35px;
+
+        }
 
     }
 
@@ -419,20 +428,14 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-
-     
+        margin: auto;
+        max-width: 634px;
+        width: 100%;
  
-        & .cheating-border {
-
+        & .cheating-border {    
             width: 40px;
             height: 3px;
             background-color: $third-color;
-        }
-
-        & h1 {
-
-            font-size: 28px;
-            font-weight: 400;
 
         }
 
@@ -440,16 +443,20 @@
             
             font-size: 16px;
             font-weight: 300;
+            margin-bottom: -3px;
 
         }
 
         &--products {
 
+        
             display: grid;
             grid-template-columns: 10fr 0fr;
             grid-template-rows: 19px 21px;
             row-gap: 5px;
             height: 69px;
+            max-width: 634px;
+            width: 100%;
             background-color: white;
             border-radius: 15px;
             box-shadow:  $shadow-hover;
@@ -457,6 +464,7 @@
             padding: 12px;
             position: relative;
             overflow: hidden;
+            margin: auto;
    
 
             & .selected-product {
