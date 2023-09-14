@@ -95,6 +95,14 @@ button:not(:hover) {
   padding: 2.5rem 2.5rem 2.5rem 2.5rem;
   margin: auto;
 }
+@media (min-width: 676px) {
+  .howto__card {
+    justify-content: space-around;
+    row-gap: 30px;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+}
 .howto__card h2 {
   align-self: flex-start;
   flex-basis: 100%;
@@ -339,14 +347,15 @@ button:not(:hover) {
   background-color: #f6f6f6;
   position: relative;
   margin-top: -60px;
-  padding: 2.5rem 2.5rem 2.5rem 2.5rem;
   border-radius: 50px 50px 0px 0px;
   padding: 3.5rem 1rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 35px;
   max-width: 1055px;
-  width: 100%;
+  width: 90%;
   box-sizing: border-box;
 }
 @media (min-width: 778px) {
@@ -392,6 +401,9 @@ button:not(:hover) {
 .menus__lists {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  margin: auto;
   gap: 10px;
   margin: auto;
   max-width: 634px;
@@ -422,6 +434,7 @@ button:not(:hover) {
   padding: 12px;
   position: relative;
   overflow: hidden;
+  margin: auto;
   margin: auto;
 }
 .menus__lists--products .selected-product {

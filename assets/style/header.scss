@@ -2,6 +2,7 @@
 
 header {
 
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +13,7 @@ header {
 
     @media (min-width:778px) {
 
-        min-width: 200px;
+        
         min-height: 96px;
 
     }
@@ -27,9 +28,15 @@ header {
     & a {
 
         position: absolute;
-        left: 0;
+        left: -3rem;
         padding-left: 5rem;
         font-size: 17px;
+
+        @media (min-width:676px) {
+            
+            left: 0;
+
+        }
 
         &:hover{
 
@@ -40,4 +47,9 @@ header {
 
     }
 
+}
+
+ [class~=fa-arrow-left] {
+
+    color: #353535;
 }

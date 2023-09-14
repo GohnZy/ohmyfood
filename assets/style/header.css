@@ -78,6 +78,7 @@ button:not(:hover) {
 }
 
 header {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,7 +89,6 @@ header {
 }
 @media (min-width: 778px) {
   header {
-    min-width: 200px;
     min-height: 96px;
   }
 }
@@ -98,11 +98,20 @@ header img {
 }
 header a {
   position: absolute;
-  left: 0;
+  left: -3rem;
   padding-left: 5rem;
   font-size: 17px;
+}
+@media (min-width: 676px) {
+  header a {
+    left: 0;
+  }
 }
 header a:hover {
   filter: brightness(105%);
   transition: 0.3s;
+}
+
+[class~=fa-arrow-left] {
+  color: #353535;
 }/*# sourceMappingURL=header.css.map */
