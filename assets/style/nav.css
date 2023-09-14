@@ -128,7 +128,7 @@ nav .intro h2 {
   margin: auto;
   width: 80%;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1069px) {
   nav .intro h2 {
     font-size: 40px;
     width: -moz-max-content;

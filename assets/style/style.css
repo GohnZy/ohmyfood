@@ -86,6 +86,7 @@ button:not(:hover) {
 .howto__card {
   flex-wrap: wrap;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: transparent;
@@ -95,9 +96,9 @@ button:not(:hover) {
   padding: 2.5rem 2.5rem 2.5rem 2.5rem;
   margin: auto;
 }
-@media (min-width: 676px) {
+@media (min-width: 1069px) {
   .howto__card {
-    justify-content: space-around;
+    flex-direction: row;
     row-gap: 30px;
     -moz-column-gap: 10px;
          column-gap: 10px;
@@ -355,7 +356,7 @@ button:not(:hover) {
   align-items: center;
   gap: 35px;
   max-width: 1055px;
-  width: 90%;
+  width: 100%;
   box-sizing: border-box;
 }
 @media (min-width: 778px) {
