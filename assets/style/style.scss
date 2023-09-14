@@ -312,15 +312,14 @@
 
     background-color: $background-color;
     position: relative;
-    margin-top: -60px;
-    @include global-padding;
+    margin-top: -30px;
     border-radius: 50px 50px 0px 0px;
-    padding: 4vh 5vw;
+    padding: 4vh 2vw;
     display: flex;
     flex-direction: column;
     gap: 35px;
     max-width: 1055px;
-    width: 90%;
+    width: 100%;
     box-sizing: border-box;
 
 
@@ -350,10 +349,11 @@
 
         display: flex;
         flex-direction: column;
+        justify-content: start;
+        align-items: center;
         gap: 10px;
+        width: 100%;
 
-     
- 
         & .cheating-border {
 
             width: 40px;
@@ -372,7 +372,6 @@
             
             font-size: 16px;
             font-weight: 300;
-
         }
 
         &--products {
@@ -381,6 +380,8 @@
             grid-template-columns: 10fr 0fr;
             grid-template-rows: 19px 21px;
             row-gap: 5px;
+            width: 100%;
+            max-width: 634px;
             height: 69px;
             background-color: white;
             border-radius: 15px;
