@@ -341,7 +341,7 @@ button:not(:hover) {
   margin-top: -60px;
   padding: 2.5rem 2.5rem 2.5rem 2.5rem;
   border-radius: 50px 50px 0px 0px;
-  padding: 3.5rem 1.5rem;
+  padding: 3.5rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 35px;
@@ -373,7 +373,7 @@ button:not(:hover) {
   animation: add-favorite-restaurants forwards;
 }
 .menus__name {
-  width: 95%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
