@@ -39,8 +39,7 @@ body {
 /*** Animation pour l'ajout des restaurants aux favoris ***/
 @keyframes add-favorite-restaurants {
   from {
-    opacity: 0.1;
-    font-weight: 1000;
+    opacity: 0;
     background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
     -webkit-background-clip: text;
             background-clip: text;
@@ -48,7 +47,6 @@ body {
   }
   to {
     opacity: 1;
-    font-weight: 1000;
     background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
     -webkit-background-clip: text;
             background-clip: text;
@@ -238,13 +236,9 @@ button:not(:hover) {
   color: black;
 }
 .restaurants__card #fav-1:checked + label i {
-  animation-duration: 0.3s;
+  animation-duration: 3s;
   animation-name: add-favorite-restaurants;
   font-weight: 1000;
-  background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .restaurants__card #fav-2:checked + label i {
   animation-duration: 0.3s;

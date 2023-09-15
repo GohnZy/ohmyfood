@@ -205,12 +205,10 @@
     
         & #fav-1:checked + label i {
     
-            animation-duration: 0.3s;
+            animation-duration: 3s;
             animation-name: add-favorite-restaurants;
             font-weight: 1000;
-            background-image: -webkit-linear-gradient($second-color, $main-color);
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+    
     
         }
     
