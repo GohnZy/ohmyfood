@@ -154,7 +154,7 @@ button:not(:hover) {
   height: -moz-fit-content;
   height: fit-content;
   margin: auto;
-  animation: resize 0s linear 1 2s backwards;
+  animation: resize 0s linear 1 3s backwards;
 }
 @media (min-width: 778px) {
   .restaurants {

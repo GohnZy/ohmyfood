@@ -4,7 +4,6 @@
 
     animation: show-nav 0.6s ease 2s forwards;
     position: relative;
-    
     width: 100%;
 
     @media (min-width:778px) {
@@ -63,7 +62,7 @@ nav {
 
         @media (min-width:1024px) {
 
-            padding: 3vh 5vw;
+            
             gap: 25px;
 
         }
@@ -98,12 +97,12 @@ nav {
 
     animation: hide-nav 1.2s ease 1  forwards;
     position: absolute;
-    top: 6vh;
+    top: 63px;
     width: 100%;
 
     @media (min-width:778px) {
 
-        top: 10vh;
+        top: 96px;
         
     }
 

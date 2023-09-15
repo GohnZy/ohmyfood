@@ -1,5 +1,5 @@
 #homepage-header, .homepage, #homepage-footer {
-  animation: blur-effect 0.6s 1 2s forwards;
+  animation: blur-effect 0.6s 1 3s forwards;
 }
 
 @keyframes blur-effect {
@@ -17,8 +17,8 @@
   background-color: transparent;
   width: 100%;
   height: 100%;
-  z-index: -10;
-  animation: fade-out 0.15s linear 2s 1 backwards;
+  z-index: 0;
+  animation: fade-out 0.15s ease 3s 1 backwards;
   position: absolute;
 }
 .loader__pics {
@@ -26,7 +26,7 @@
   height: 100px;
   content: url(../style/icons/fork.PNG);
   position: relative;
-  animation: loading 1s 2 linear alternate;
+  animation: loading 1.5s 2 ease-in-out alternate;
   transform: rotate(0deg) scale(1);
   opacity: 0;
 }
@@ -45,8 +45,10 @@
 }
 @keyframes loading {
   0% {
-    transform: rotate(0deg) scale(1);
     opacity: 1;
+  }
+  1% {
+    transform: rotate(0deg) scale(1);
   }
   25% {
     transform: rotate(90deg) scale(1.5);
@@ -58,6 +60,9 @@
   75% {
     transform: rotate(270deg) scale(1.5);
   }
+  99% {
+    transform: rotate(360deg) scale(1);
+  }
   100% {
     transform: rotate(360deg) scale(1);
     opacity: 1;
@@ -65,10 +70,10 @@
 }
 @keyframes resize {
   0% {
-    display: none;
+    position: fixed;
   }
   100% {
-    display: none;
+    position: fixed;
   }
 }
 /*# sourceMappingURL=loader.css.map */

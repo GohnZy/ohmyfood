@@ -6,7 +6,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 63px; 
+    height: 63px; 
     width: 100%;
     background-color: white;
     z-index: 3;
@@ -14,7 +14,7 @@ header {
     @media (min-width:778px) {
 
         
-        min-height: 96px;
+        height: 96px;
 
     }
 
@@ -28,8 +28,8 @@ header {
     & a {
 
         position: absolute;
-        left: -3rem;
         padding-left: 5rem;
+        left: -2rem;
         font-size: 17px;
 
         @media (min-width:676px) {
