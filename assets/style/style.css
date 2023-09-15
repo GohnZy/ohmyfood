@@ -91,22 +91,21 @@ button:not(:hover) {
   align-items: center;
   background-color: transparent;
   gap: 30px;
-  max-width: 1080px;
+  max-width: 1340px;
   box-sizing: border-box;
-  padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+  padding: 3rem 1.09rem;
   margin: auto;
 }
 @media (min-width: 1069px) {
   .howto__card {
     flex-direction: row;
-    row-gap: 30px;
-    -moz-column-gap: 10px;
-         column-gap: 10px;
   }
 }
 .howto__card h2 {
   align-self: flex-start;
   flex-basis: 100%;
+  width: 100%;
+  max-width: 1050px;
 }
 .howto__card--step {
   background-color: #f6f6f6;
@@ -149,8 +148,8 @@ button:not(:hover) {
   align-items: center;
   gap: 18px;
   width: 100%;
-  max-width: 1080px;
-  padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+  max-width: 1440px;
+  padding: 3rem 1.09rem;
   box-sizing: border-box;
   height: -moz-fit-content;
   height: fit-content;
@@ -161,7 +160,7 @@ button:not(:hover) {
   .restaurants {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 35px 7%;
+    gap: 35px 5%;
   }
 }
 .restaurants__card {
@@ -277,8 +276,8 @@ button:not(:hover) {
 .restaurants__title {
   align-self: flex-start;
   flex-basis: 100%;
-  max-width: 1080px;
-  padding-left: 0;
+  width: 100%;
+  max-width: 1050px;
 }
 .restaurants a {
   text-decoration: none;
